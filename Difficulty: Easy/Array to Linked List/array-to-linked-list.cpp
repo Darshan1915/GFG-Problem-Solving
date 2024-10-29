@@ -49,29 +49,35 @@ public:
 class Solution {
   public:
     Node* constructLL(vector<int>& arr) {
+        // code here
         
-        Node* head= NULL;
-        //   Node* head=  new Node(arr[0]);
-        Node* tail = NULL;
-        //   Node* tail= head;
-        
-           for (int i=0; i<arr.size(); i++){
-               Node *n = new Node(arr[i]); // Create a new node with value 'x'.
-
-            // If the list is empty (head and tail are NULL):
-            if(head == NULL && tail == NULL)
-            {
-                head = n; // The new node becomes the head (first node).
-                tail = n; // The new node also becomes the tail (last node).
-            }
-            else
-            {
-                tail->next = n; // Link the current tail's 'next' to the new node.
-                tail = n; // Update the tail to the new node (now it's the last node in the list).
-            }
-              
-           }
+        Node* head=  new Node(arr[0]);
+        Node* tail= head;
+        for (int i=1; i<arr.size(); i++){
+            Node* temp= new Node(arr[i]);
+            tail->next= temp;
+            tail= temp;
+           
+        }
         return head;
+        
+        
+        
+        
+        // Node* head = NULL;
+        // Node* tail = NULL;
+        // if(next == NULL){
+        //     Node* temp = new node (arr[0]);
+        //     head = temp;
+        //     tail = temp;
+        // }
+        // for(int i=1; i<arr.size(); i++){
+        //     int x= arr[i];
+        //     Node* temp = new node (x);
+        //     tail -> next = temp;
+        //     tail = temp;
+        // }
+        // return head;
     }
 };
 
@@ -96,7 +102,7 @@ int main() {
             cout << ans->data << " ";
             ans = ans->next;
         }
-        cout << "\n";
+        cout << "\n~\n";
     }
     return 0;
 }
