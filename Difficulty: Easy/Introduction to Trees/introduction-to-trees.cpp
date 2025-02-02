@@ -14,8 +14,7 @@ class Solution {
   public:
     int countNodes(int i) {
         // your code here
-        int res = pow(2,i-1);
-        return res;
+        return pow(2,i-1);
     }
 };
 
