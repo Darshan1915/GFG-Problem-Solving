@@ -8,6 +8,7 @@ using namespace std;
 
 
 // } Driver Code Ends
+
 // User function Template for C++
 
 class Solution {
@@ -17,6 +18,7 @@ class Solution {
         return pow(2,i-1);
     }
 };
+
 
 //{ Driver Code Starts.
 
